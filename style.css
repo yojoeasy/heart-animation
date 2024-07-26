@@ -1,0 +1,31 @@
+body{
+    background-color: black;
+    margin: 0;
+    height: 100vh;
+}
+
+span{
+    background-image: url("https://cdn4.iconfinder.com/data/icons/small-n-flat/24/heart-256.png");
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    background-size: cover;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    pointer-events: none; /* before this two heart one in x and one in y after this one one point heart */
+    animation: animate 9s linear;
+}
+
+@keyframes animate {
+    0%{
+        transform: translate(-50%,-50%);
+        opacity: 1;
+        filter: hue-rotate(0);
+    }
+    100%{
+        transform: translate(-50%,-5000%);
+        opacity: 0;
+        filter: hue-rotate(3600deg);
+    }
+}
